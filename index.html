@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Handson11</title>
+    <style>
+        pre {
+            color: blue;
+            font-size: 15px;
+        }
+        hr {
+            height: 3px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Functions</h1>
+    <h3>Q1. Create one function with zero parameter having a console statement</h3>
+    <pre>
+        function myfun(a,b) {
+            console.log(a*b);
+        }
+        let ans1 = myfun(3,4);
+        document.getElementById("ans1").innerHTML = ans1;
+    </pre>
+    <h3>Output</h3>
+    <p id="ans1">ans1</p>
+    <hr/>
+    
+    <h2>Q2. Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"</h2>
+    <pre>
+        function add(a,b) {
+            console.log(a+b);
+            return a+b;
+        }
+        let ans2 =add(3,4)
+        document.getElementById("ans2").innerHTML = ans2;
+    </pre>
+    <h3>Output</h3>
+    <p id="ans2">ans2</p>
+    <hr/>
+
+    <h2>Q3. Create one arrow function</h2>
+    <pre>
+        let arrowfun=((a, b) => {
+            console.log(a+b) 
+            return `${a*b} `
+        });
+        let ans3 = arrowfun(240,60);
+        document.getElementById("ans3").innerHTML = ans3;
+    </pre>
+    <h3>Output</h3>
+    <p id="ans3">ans3</p>
+    <hr/>
+
+    <h2>Q4. Print output </h2>
+    <pre>
+        var x = 21;
+        var girl = function () {
+            console.log(x);
+            var x = 20;
+        };
+        girl ();
+    </pre>
+    <h3>Output</h3>
+    <p id="ans4">ans4</p>
+
+    <h2>Q5. Print output </h2>
+    <pre>    
+        var y = 21;
+        girl1();
+        console.log(y)
+        function girl1() {
+            console.log(y);
+            var y = 20;
+        };
+    </pre>
+    <h2>Output</h2>
+    <p id="ans51">ans5</p>
+    <p id="ans52">ans5</p>
+    <hr/>
+
+    <h2>Q6. Print output</h2>
+    <pre>
+        var x = 21;
+        a();
+        b();
+        
+        function a() {
+            x = 20;
+            console.log(x);
+        };
+        function b() {
+            x = 40;
+            console.log(x);
+        };
+    </pre>
+    <h2>Output</h2>
+    <p>20</p>
+    <p>40</p>
+    <hr/>
+
+    <h2>Q7. Write a function that accepts parameter n and returns factorial of n</h2>
+    <pre>
+        function fact(n) {
+
+            if (n < 0) {
+              return "Error: Factorial of a negative number does not exist.";
+            }
+        
+            else if (n === 0 || n === 1) {
+              return 1;
+            }
+        
+            else {
+              return n * fact(n - 1);
+            }
+          }
+          console.log(fact(5));
+    </pre>
+    <h2>Output</h2>
+    <p id="ans7">ans7</p>
+    <hr/>
+
+    <h2>Q8. Guess the Output </h2>
+    <pre>
+        function FindSum(a1, b1){
+            return a1 + b1;
+        }
+        
+        function DisplayData(data, batch){
+            console.log(`i am from ${data} and My batch is EA${batch}`)
+        }
+        
+        DisplayData(""PrepBytes"", FindSum(10, 9));
+    </pre>
+    <h2>Output</h2>
+    <p>i am from PrepBytes and My batch is EA19</p>
+    <hr/>
+
+    <h2>Q9. Guess the output </h2>
+    <pre>
+        Abc();
+        const Abc = function(){
+            let value = 20;
+            console.log(value);
+        };
+    </pre>
+    <h2>Output</h2>
+    <p>Uncaught ReferenceError: Cannot access 'Abc' before initialization</p>
+    <hr/>
+
+    <h2>Q10. Guess the output </h2>
+    <pre>
+        var r = 10;
+        (function (){
+            console.log(r);
+            var r = 20;
+        })();
+    </pre>
+    <h2>Output</h2>
+    <p>undefined</p>
+    <hr/>
+
+    <h2>Q11. Guess the Output </h2>
+    <pre>
+        const greet =  function(name){
+            return function(m){
+            
+                console.log(`Hi!! ${name}, ${m}`);
+            }
+        }
+          
+        const greet_message = greet('EA19');
+        greet_message("Welcome To PrepBytes");
+    </pre>
+    <h2>Output</h2>
+    <p>Hi!! EA19, Welcome To PrepBytes</p>
+    <hr/>
+
+    <script src="./script.js"></script>
+</body>
+</html>
